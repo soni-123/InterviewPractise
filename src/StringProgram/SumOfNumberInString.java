@@ -20,7 +20,20 @@ public class SumOfNumberInString {
 			
 		}
 		sum+=Integer.parseInt(tempNum);
-		System.out.print("Total sum of digit= "+sum);
+		System.out.println("Total sum of digit= "+sum);
+		getSum();
+	}
+	
+	public static void getSum() {
+		String s="Selenium45Automation78java56";
+        int total=0;
+        for(String NumStr:s.split("[^0-9]")){
+        	//System.out.println(NumStr);
+            if(!NumStr.isEmpty()){
+                total += Integer.parseInt(NumStr);
+            }
+        }
+        System.out.println("Total:"+total);
 	}
 
 }
